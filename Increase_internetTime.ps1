@@ -19,5 +19,5 @@ $Local = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings'
 $computer = read-Host "Enter the Computer name"
 Enter-PSSession -ComputerName $computer
 
-Set-Location internetsettings| Set-timeout1
+Set-Location $internetsettings| Set-timeout1
 Set-Location $Local | Set-timeout2
