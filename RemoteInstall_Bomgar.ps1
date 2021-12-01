@@ -19,9 +19,11 @@ function install-bgar {
 
 $check = Get-Command psexec -ErrorAction SilentlyContinue
 if ($check) {
+    clear-host
     install-bgar 
 } 
 else {
+    Clear-Host
     write-host '***** installing PSEXEC for remote installation *****'
     Invoke-WebRequest -Uri 'https://download.sysinternals.com/files/PSTools.zip' -OutFile 'pstools.zip'
     Expand-Archive -Path 'pstools.zip' -DestinationPath "C:\Windows\System32\"  
